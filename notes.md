@@ -9,7 +9,7 @@ Notes
 Murid
 ----------
 Halaman / menu Rapot siswa error jika value Null
-- Trying to access array offset on value of type null (View: C:\xampp\htdocs\spandiv\Sistem-Informasi-Akademik-Sekolah-Laravel-master\resources\views\siswa\rapot.blade.php)
+- Trying to access array offset on value of type null (View: C:\xampp\htdocs\spandiv\Sistem-Informasi-Akademik-Sekolah-Laravel-master\resources\views\siswa\rapot.blade.php) [SOLVED]
 
 Guru
 ----------
