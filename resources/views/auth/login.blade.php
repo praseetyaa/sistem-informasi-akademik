@@ -1,7 +1,7 @@
 @extends('layouts.app')
-@section('page', 'Login Authentication')
+@section('page', 'Login')
 @section('content')
-<div class="card-body login-card-body">
+<div class="card-body login-card-body" style="background-color:transparent;">
   <p class="login-box-msg">Sign in to start your session</p>
 
   <form action="{{ route('login') }}" method="post">

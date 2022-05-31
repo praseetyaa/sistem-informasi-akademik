@@ -11,23 +11,23 @@
   <link rel="stylesheet" href="{{ asset('dist/css/adminlte.min.css') }}">
   <link rel="shrotcut icon" href="{{ asset('img/favicon.ico') }}">
 </head>
-<body class="hold-transition login-page" style="background-image: url('{{ asset("img/wallup.jpg") }}'); background-size: cover; background-attachment: fixed;">
+<body class="hold-transition login-page" style="background: #0066FF; background-size: cover; background-attachment: fixed;">
   <div class="login-box">
     <div class="login-logo">
-      <img src="{{ asset('img/logosiakad.png') }}" width="100%" alt="">
+      <h1 class="text-white">SIAKUR</h1>
     </div>
 
-    <div class="login-logo" style="color: white;">
+    <div class="login-logo" style="color: white; font-size: 1.5rem;">
       @yield('page')
     </div>
 
-    <div class="card">
+    <div class="card" style="border-radius: 1rem;">
       @yield('content')
     </div>
 
-    <footer style="color: white;">
+    <footer style="color: white;" class="d-none">
       <marquee>
-          <strong>Copyright &copy; <script>document.write(new Date().getFullYear());</script> &diams; <a href="http://smkn1jenpo.sch.id/" style="color: white;">SMK Negeri 1 Jenangan Ponorogo</a>. </strong>
+          <strong>Copyright &copy; <script>document.write(new Date().getFullYear());</script> &diams; <a href="#" style="color: white;">SIAKUR</a>. </strong>
       </marquee>
     </footer>
   </div>
