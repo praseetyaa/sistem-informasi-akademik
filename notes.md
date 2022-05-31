@@ -14,3 +14,8 @@ Halaman / menu Rapot siswa error jika value Null
 Guru
 ----------
 Entry Nilai Ulangan skala 0-99 ( nginput satu save baru nginput berikutnya )
+
+Kurang
+-----------------------------------------------
+- Kaldick
+- Mutasi
