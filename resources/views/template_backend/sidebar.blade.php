@@ -165,7 +165,7 @@
                                     <p>Nilai Rapot</p>
                                 </a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item d-none">
                                 <a href="{{ route('predikat') }}" class="nav-link" id="Deskripsi">
                                     <i class="fas fa-file-alt nav-icon"></i>
                                     <p>Deskripsi Predikat</p>

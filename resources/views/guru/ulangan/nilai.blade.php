@@ -101,51 +101,22 @@
                                         @endif
                                     </td>
                                     <td class="ctr">
-                                        @if ($data->ulangan($data->id) && $data->ulangan($data->id)['ulha_1'])
-                                            <div class="text-center">{{ $data->ulangan($data->id)['ulha_1'] }}</div>
-                                            <input type="hidden" name="ulha_1" class="ulha_1_{{$data->id}}" value="{{ $data->ulangan($data->id)['ulha_1'] }}">
-                                        @else
-                                            <input type="text" name="ulha_1" maxlength="2" onkeypress="return inputAngka(event)" style="margin: auto;" class="form-control text-center ulha_1_{{$data->id}}" autocomplete="off">
-                                        @endif
+                                        <input type="text" name="ulha_1" onkeypress="return inputAngka(event)" style="margin: auto;" class="form-control text-center ulha_1_{{$data->id}}" value="{{ $data->ulangan($data->id)['ulha_1'] }}" autocomplete="off">
                                     </td>
                                     <td class="ctr">
-                                        @if ($data->ulangan($data->id) && $data->ulangan($data->id)['ulha_2'])
-                                            <div class="text-center">{{ $data->ulangan($data->id)['ulha_2'] }}</div>
-                                            <input type="hidden" name="ulha_2" class="ulha_2_{{$data->id}}" value="{{ $data->ulangan($data->id)['ulha_2'] }}">
-                                        @else
-                                            <input type="text" name="ulha_2" maxlength="2" onkeypress="return inputAngka(event)" style="margin: auto;" class="form-control text-center ulha_2_{{$data->id}}" autocomplete="off">
-                                        @endif
+                                        <input type="text" name="ulha_2" onkeypress="return inputAngka(event)" style="margin: auto;" class="form-control text-center ulha_2_{{$data->id}}" value="{{ $data->ulangan($data->id)['ulha_2'] }}" autocomplete="off">
                                     </td>
                                     <td class="ctr">
-                                        @if ($data->ulangan($data->id) && $data->ulangan($data->id)['uts'])
-                                            <div class="text-center">{{ $data->ulangan($data->id)['uts'] }}</div>
-                                            <input type="hidden" name="uts" class="uts_{{$data->id}}" value="{{ $data->ulangan($data->id)['uts'] }}">
-                                        @else
-                                            <input type="text" name="uts" maxlength="2" onkeypress="return inputAngka(event)" style="margin: auto;" class="form-control text-center uts_{{$data->id}}" autocomplete="off">
-                                        @endif
+                                        <input type="text" name="uts" onkeypress="return inputAngka(event)" style="margin: auto;" class="form-control text-center uts_{{$data->id}}" value="{{ $data->ulangan($data->id)['uts'] }}" autocomplete="off">
                                     </td>
                                     <td class="ctr">
-                                        @if ($data->ulangan($data->id) && $data->ulangan($data->id)['ulha_3'])
-                                            <div class="text-center">{{ $data->ulangan($data->id)['ulha_3'] }}</div>
-                                            <input type="hidden" name="ulha_3" class="ulha_3_{{$data->id}}" value="{{ $data->ulangan($data->id)['ulha_3'] }}">
-                                        @else
-                                            <input type="text" name="ulha_3" maxlength="2" onkeypress="return inputAngka(event)" style="margin: auto;" class="form-control text-center ulha_3_{{$data->id}}" autocomplete="off">
-                                        @endif
+                                        <input type="text" name="ulha_3" onkeypress="return inputAngka(event)" style="margin: auto;" class="form-control text-center ulha_3_{{$data->id}}" value="{{ $data->ulangan($data->id)['ulha_3'] }}" autocomplete="off">
                                     </td>
                                     <td class="ctr">
-                                        @if ($data->ulangan($data->id) && $data->ulangan($data->id)['uas'])
-                                            <div class="text-center">{{ $data->ulangan($data->id)['uas'] }}</div>
-                                            <input type="hidden" name="uas" class="uas_{{$data->id}}" value="{{ $data->ulangan($data->id)['uas'] }}">
-                                        @else
-                                            <input type="text" name="uas" maxlength="2" onkeypress="return inputAngka(event)" style="margin: auto;" class="form-control text-center uas_{{$data->id}}" autocomplete="off">
-                                        @endif
+                                        <input type="text" name="uas" onkeypress="return inputAngka(event)" style="margin: auto;" class="form-control text-center uas_{{$data->id}}" value="{{ $data->ulangan($data->id)['uas'] }}" autocomplete="off">
                                     </td>
                                     <td class="ctr sub_{{$data->id}}">
-                                        @if ($data->nilai($data->id))
-                                            <i class="fas fa-check" style="font-weight:bold;"></i>
-                                        @else
-                                            <button type="button" id="submit-{{$data->id}}" class="btn btn-default btn_click" data-id="{{$data->id}}"><i class="nav-icon fas fa-save"></i></button>
-                                        @endif
+                                        <button type="button" id="submit-{{$data->id}}" class="btn btn-default btn_click" data-id="{{$data->id}}"><i class="nav-icon fas fa-save"></i></button>
                                     </td>
                                 </tr>
                             @endforeach
@@ -190,7 +161,7 @@
                     uas : uas,
                 },
                 success: function(data){
-                    toastr.success("Nilai ulangan siswa berhasil ditambahkan!");
+                    toastr.success("Nilai ulangan siswa berhasil diperbarui!");
                     location.reload();
                 },
                 error: function (data) {
@@ -202,5 +173,13 @@
         $("#NilaiGuru").addClass("active");
         $("#liNilaiGuru").addClass("menu-open");
         $("#UlanganGuru").addClass("active");
+
+        $(document).on("keyup", "input[name=ulha_1], input[name=ulha_2], input[name=ulha_3], input[name=uts], input[name=uas]", function() {
+            var value = $(this).val();
+            if(value >= 0 && value <= 100)
+                $(this).val(parseInt(value));
+            else
+                $(this).val(0);
+        });
     </script>
 @endsection

@@ -9,11 +9,11 @@ Notes
 Murid
 ----------
 Halaman / menu Rapot siswa error jika value Null
-- Trying to access array offset on value of type null (View: C:\xampp\htdocs\spandiv\Sistem-Informasi-Akademik-Sekolah-Laravel-master\resources\views\siswa\rapot.blade.php)
+- Trying to access array offset on value of type null (View: C:\xampp\htdocs\spandiv\Sistem-Informasi-Akademik-Sekolah-Laravel-master\resources\views\siswa\rapot.blade.php) [SOLVED]
 
 Guru
 ----------
-Entry Nilai Ulangan skala 0-99 ( nginput satu save baru nginput berikutnya )
+Entry Nilai Ulangan skala 0-99 ( nginput satu save baru nginput berikutnya ) [SOLVED]
 
 Kurang
 -----------------------------------------------

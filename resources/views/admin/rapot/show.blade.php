@@ -92,12 +92,12 @@
                                         $array = array('mapel' => $val, 'siswa' => $siswa->id);
                                         $jsonData = json_encode($array);
                                     @endphp
-                                    <td class="ctr">{{ $data->cekRapot($jsonData)['p_nilai'] }}</td>
-                                    <td class="ctr">{{ $data->cekRapot($jsonData)['p_predikat'] }}</td>
-                                    <td class="ctr">{{ $data->cekRapot($jsonData)['p_deskripsi'] }}</td>
-                                    <td class="ctr">{{ $data->cekRapot($jsonData)['k_nilai'] }}</td>
-                                    <td class="ctr">{{ $data->cekRapot($jsonData)['k_predikat'] }}</td>
-                                    <td class="ctr">{{ $data->cekRapot($jsonData)['k_deskripsi'] }}</td>
+                                    <td class="ctr">{{ is_array($data->cekRapot($jsonData)) && array_key_exists('p_nilai', $data->cekRapot($jsonData)) ? $data->cekRapot($jsonData)['p_nilai'] : '-' }}</td>
+                                    <td class="ctr">{{ is_array($data->cekRapot($jsonData)) && array_key_exists('p_predikat', $data->cekRapot($jsonData)) ? $data->cekRapot($jsonData)['p_predikat'] : '-' }}</td>
+                                    <td class="ctr">{{ is_array($data->cekRapot($jsonData)) && array_key_exists('p_deskripsi', $data->cekRapot($jsonData)) ? $data->cekRapot($jsonData)['p_deskripsi'] : '-' }}</td>
+                                    <td class="ctr">{{ is_array($data->cekRapot($jsonData)) && array_key_exists('k_nilai', $data->cekRapot($jsonData)) ? $data->cekRapot($jsonData)['k_nilai'] : '-' }}</td>
+                                    <td class="ctr">{{ is_array($data->cekRapot($jsonData)) && array_key_exists('k_predikat', $data->cekRapot($jsonData)) ? $data->cekRapot($jsonData)['k_predikat'] : '-' }}</td>
+                                    <td class="ctr">{{ is_array($data->cekRapot($jsonData)) && array_key_exists('k_deskripsi', $data->cekRapot($jsonData)) ? $data->cekRapot($jsonData)['k_deskripsi'] : '-' }}</td>
                                 </tr>
                             @endforeach
                     </tbody>
