@@ -28,6 +28,7 @@ class NilaiController extends Controller
      */
     public function create()
     {
+        abort(404);
         $guru = Guru::orderBy('kode')->get();
         return view('admin.nilai.index', compact('guru'));
     }
