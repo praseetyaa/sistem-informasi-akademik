@@ -1,6 +1,6 @@
 <footer class="main-footer">
         <marquee>
-            <strong>Copyright &copy; <script>document.write(new Date().getFullYear());</script> &diams; <a href="http://smkn1jenpo.sch.id/">SIAKUR</a>. </strong>
+            <strong>Copyright &copy; <script>document.write(new Date().getFullYear());</script> &diams; <a href="#">SIAKUR</a>. </strong>
         </marquee>
     </footer>
 
@@ -60,7 +60,7 @@
 <!-- Bootstrap Switch -->
 <script src="{{ asset('plugins/bootstrap-switch/js/bootstrap-switch.min.js') }}"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-<script src="{{ asset('dist/js/pages/dashboard.js') }}"></script>
+<!-- <script src="{{ asset('dist/js/pages/dashboard.js') }}"></script> -->
 <!-- fullCalendar 2.2.5 -->
 <script src="{{ asset('plugins/moment/moment.min.js') }}"></script>
 <script src="{{ asset('plugins/fullcalendar/main.min.js') }}"></script>

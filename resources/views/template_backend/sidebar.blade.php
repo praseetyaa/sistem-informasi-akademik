@@ -53,31 +53,82 @@
                             <p>Data Siswa</p>
                         </a>
                     </li>
+                    <!-- ============== -->
+                    <!-- Master -->
+                    <!-- ============== -->
                     <li class="nav-item has-treeview" id="liMasterData">
                         <a href="#" class="nav-link" id="MasterData">
                             <i class="nav-icon fas fa-edit"></i>
                             <p>
-                                Master Data
+                                Data Master
                                 <i class="fas fa-angle-left right"></i>
                             </p>
                         </a>
                         <ul class="nav nav-treeview ml-4">
                             <li class="nav-item">
+                                <a href="#" class="nav-link" id="DataKurikulum">
+                                    <i class="fas fa-circle nav-icon"></i>
+                                    <p>Data Kurikulum</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link" id="DataSilabus">
+                                    <i class="fas fa-circle nav-icon"></i>
+                                    <p>Data Silabus</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link" id="DataProta">
+                                    <i class="fas fa-circle nav-icon"></i>
+                                    <p>Data Prota</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link" id="DataPromes">
+                                    <i class="fas fa-circle nav-icon"></i>
+                                    <p>Data Promes</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link" id="DataRPP">
+                                    <i class="fas fa-circle nav-icon"></i>
+                                    <p>Data RPP</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link" id="DataTahunAkademik">
+                                    <i class="fas fa-circle nav-icon"></i>
+                                    <p>Data Tahun Akademik</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
                                 <a href="{{ route('kelas.index') }}" class="nav-link" id="DataKelas">
-                                    <i class="fas fa-home nav-icon"></i>
+                                    <i class="fas fa-circle nav-icon"></i>
                                     <p>Data Kelas</p>
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a href="{{ route('mapel.index') }}" class="nav-link" id="DataMapel">
-                                    <i class="fas fa-book nav-icon"></i>
-                                    <p>Data Mapel</p>
+                                    <i class="fas fa-circle nav-icon text-success"></i>
+                                    <p>Data Mata Pelajaran</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="{{ route('user.index') }}" class="nav-link" id="DataUser">
-                                    <i class="fas fa-user-plus nav-icon"></i>
-                                    <p>Data User</p>
+                                <a href="#" class="nav-link" id="DataSikap">
+                                    <i class="fas fa-circle nav-icon"></i>
+                                    <p>Data Sikap</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link" id="DataKKM">
+                                    <i class="fas fa-circle nav-icon"></i>
+                                    <p>Data KKM</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link" id="DataDeskripsiNilai">
+                                    <i class="fas fa-circle nav-icon"></i>
+                                    <p>Data Deskripsi Nilai</p>
                                 </a>
                             </li>
                         </ul>
@@ -133,18 +184,50 @@
                     @else
                     @endif
                     <li class="nav-item">
+                        <a href="#" class="nav-link" id="DataJadwal">
+                            <i class="fas fa-calendar-alt nav-icon"></i>
+                            <p>Kalender Akademik</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
                         <a href="{{ route('jadwal.index') }}" class="nav-link" id="DataJadwal">
                             <i class="fas fa-calendar-alt nav-icon"></i>
                             <p>Jadwal Pelajaran</p>
                         </a>
                     </li>
                     <li class="nav-item">
+                        <a href="#" class="nav-link" id="WaliKelas">
+                            <i class="fas fa-calendar-check nav-icon"></i>
+                            <p>Wali Kelas</p>
+                        </a>
+                    </li>
+                    <li class="nav-item d-none">
                         <a href="{{ route('guru.absensi') }}" class="nav-link" id="AbsensiGuru">
                             <i class="fas fa-calendar-check nav-icon"></i>
                             <p>Absensi Guru</p>
                         </a>
                     </li>
-                    <li class="nav-item has-treeview" id="liNilai">
+                    <li class="nav-item">
+                        <a href="{{ route('rapot-kelas') }}" class="nav-link" id="Rapot">
+                            <i class="fas fa-file-alt nav-icon"></i>
+                            <p>Cetak Raport</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" id="PenggunaSistem">
+                            <i class="fas fa-file-alt nav-icon"></i>
+                            <p>Mutasi Siswa</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ route('user.index') }}" class="nav-link" id="DataUser">
+                            <i class="fas fa-users nav-icon"></i>
+                            <p>Pengguna Sistem</p>
+                        </a>
+                    </li>
+
+                    <!-- none -->
+                    <li class="nav-item has-treeview d-none" id="liNilai">
                         <a href="#" class="nav-link" id="Nilai">
                             <i class="nav-icon fas fa-file-signature"></i>
                             <p>
@@ -179,7 +262,14 @@
                             </li>
                         </ul>
                     </li>
+
                     <li class="nav-item">
+                        <a href="#" class="nav-link" id="ProfileSekolah">
+                            <i class="nav-icon fas fa-clipboard"></i>
+                            <p>Profile Sekolah</p>
+                        </a>
+                    </li>
+                    <li class="nav-item d-none">
                         <a href="{{ route('admin.pengumuman') }}" class="nav-link" id="Pengumuman">
                             <i class="nav-icon fas fa-clipboard"></i>
                             <p>Pengumuman</p>

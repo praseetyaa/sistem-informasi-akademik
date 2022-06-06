@@ -182,8 +182,6 @@
 @endsection
 @section('script')
     <script>
-        $("#MasterData").addClass("active");
-        $("#liMasterData").addClass("menu-open");
         $("#DataSiswa").addClass("active");
     </script>
 @endsection

@@ -99,8 +99,6 @@
         window.location="{{ route('guru.mapel', Crypt::encrypt($guru->mapel_id)) }}";
         });
     });
-    $("#MasterData").addClass("active");
-    $("#liMasterData").addClass("menu-open");
     $("#DataGuru").addClass("active");
 </script>
 @endsection

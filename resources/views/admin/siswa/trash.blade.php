@@ -53,8 +53,6 @@
 @endsection
 @section('script')
     <script>
-        $("#ViewTrash").addClass("active");
-        $("#liViewTrash").addClass("menu-open");
         $("#TrashSiswa").addClass("active");
     </script>
 @endsection

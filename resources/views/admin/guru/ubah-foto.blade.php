@@ -57,8 +57,6 @@
 @endsection
 @section('script')
     <script>
-        $("#MasterData").addClass("active");
-        $("#liMasterData").addClass("menu-open");
         $("#DataGuru").addClass("active");
     </script>
 @endsection

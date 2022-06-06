@@ -95,8 +95,6 @@
         window.location="{{ route('siswa.kelas', Crypt::encrypt($siswa->kelas_id)) }}";
         });
     });
-    $("#MasterData").addClass("active");
-    $("#liMasterData").addClass("menu-open");
     $("#DataSiswa").addClass("active");
 </script>
 @endsection
