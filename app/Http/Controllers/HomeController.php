@@ -33,6 +33,7 @@ class HomeController extends Controller
      */
     public function index()
     {
+        return redirect()->route('admin.home');
         $hari = date('w');
         $jam = date('H:i');
         $jadwal = Jadwal::OrderBy('jam_mulai')->OrderBy('jam_selesai')->OrderBy('kelas_id')->where('hari_id', $hari)->where('jam_mulai', '<=', $jam)->where('jam_selesai', '>=', $jam)->get();
