@@ -109,7 +109,7 @@
                             </li>
                             <li class="nav-item">
                                 <a href="{{ route('mapel.index') }}" class="nav-link" id="DataMapel">
-                                    <i class="fas fa-circle nav-icon text-success"></i>
+                                    <i class="fas fa-circle nav-icon"></i>
                                     <p>Data Mata Pelajaran</p>
                                 </a>
                             </li>
